@@ -71,16 +71,22 @@ cargo run -- --help
 Add a new block (example):
 
 ```bash
-cargo run -- add-block --data "Example message"
+cargo run addblock "test"
 ```
 
-Show chain state / latest block:
+Show chain state / all blocks:
 
 ```bash
-cargo run -- show-chain
+cargo run printchain
 ```
 
-Replace the commands above with the actual subcommands/flags defined in `src/cli.rs`.
+Clear the blockchain (remove persisted data):
+
+```bash
+cargo run clear
+```
+
+The real subcommands implemented in `src/cli.rs` are `addblock <DATA>`, `printchain` and `clear`.
 
 ### Architecture and design notes
 
